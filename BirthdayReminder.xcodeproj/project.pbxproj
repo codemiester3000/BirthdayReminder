@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C52F0A822A0C8DA900ED189A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52F0A812A0C8DA900ED189A /* AppDelegate.swift */; };
+		C52F0A842A0C8F2500ED189A /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52F0A832A0C8F2500ED189A /* ContactManager.swift */; };
 		C5C93D222A0B0A310047A7F3 /* BirthdayReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C93D212A0B0A310047A7F3 /* BirthdayReminderApp.swift */; };
-		C5C93D242A0B0A310047A7F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C93D232A0B0A310047A7F3 /* ContentView.swift */; };
+		C5C93D242A0B0A310047A7F3 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C93D232A0B0A310047A7F3 /* ContactListView.swift */; };
 		C5C93D262A0B0A330047A7F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C93D252A0B0A330047A7F3 /* Assets.xcassets */; };
 		C5C93D292A0B0A330047A7F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C93D282A0B0A330047A7F3 /* Preview Assets.xcassets */; };
 		C5C93D2B2A0B0A330047A7F3 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C93D2A2A0B0A330047A7F3 /* Persistence.swift */; };
@@ -16,6 +18,9 @@
 		C5C93D382A0B0A330047A7F3 /* BirthdayReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C93D372A0B0A330047A7F3 /* BirthdayReminderTests.swift */; };
 		C5C93D422A0B0A330047A7F3 /* BirthdayReminderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C93D412A0B0A330047A7F3 /* BirthdayReminderUITests.swift */; };
 		C5C93D442A0B0A330047A7F3 /* BirthdayReminderUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C93D432A0B0A330047A7F3 /* BirthdayReminderUITestsLaunchTests.swift */; };
+		C5C93D512A0B0A8A0047A7F3 /* ContactDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C93D502A0B0A8A0047A7F3 /* ContactDetailView.swift */; };
+		C5C93D532A0B0A9C0047A7F3 /* EditMessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C93D522A0B0A9C0047A7F3 /* EditMessageView.swift */; };
+		C5C93D562A0B0B090047A7F3 /* BirthdayReminderModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C5C93D542A0B0B090047A7F3 /* BirthdayReminderModel.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,9 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C52F0A812A0C8DA900ED189A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C52F0A832A0C8F2500ED189A /* ContactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactManager.swift; sourceTree = "<group>"; };
 		C5C93D1E2A0B0A310047A7F3 /* BirthdayReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C93D212A0B0A310047A7F3 /* BirthdayReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayReminderApp.swift; sourceTree = "<group>"; };
-		C5C93D232A0B0A310047A7F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C5C93D232A0B0A310047A7F3 /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
 		C5C93D252A0B0A330047A7F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5C93D282A0B0A330047A7F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C5C93D2A2A0B0A330047A7F3 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -48,6 +55,9 @@
 		C5C93D3D2A0B0A330047A7F3 /* BirthdayReminderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BirthdayReminderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C93D412A0B0A330047A7F3 /* BirthdayReminderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayReminderUITests.swift; sourceTree = "<group>"; };
 		C5C93D432A0B0A330047A7F3 /* BirthdayReminderUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayReminderUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C5C93D502A0B0A8A0047A7F3 /* ContactDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactDetailView.swift; sourceTree = "<group>"; };
+		C5C93D522A0B0A9C0047A7F3 /* EditMessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditMessageView.swift; sourceTree = "<group>"; };
+		C5C93D552A0B0B090047A7F3 /* BirthdayReminderModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BirthdayReminderModel.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +109,16 @@
 			isa = PBXGroup;
 			children = (
 				C5C93D212A0B0A310047A7F3 /* BirthdayReminderApp.swift */,
-				C5C93D232A0B0A310047A7F3 /* ContentView.swift */,
+				C5C93D232A0B0A310047A7F3 /* ContactListView.swift */,
 				C5C93D252A0B0A330047A7F3 /* Assets.xcassets */,
 				C5C93D2A2A0B0A330047A7F3 /* Persistence.swift */,
 				C5C93D2C2A0B0A330047A7F3 /* BirthdayReminder.xcdatamodeld */,
 				C5C93D272A0B0A330047A7F3 /* Preview Content */,
+				C5C93D502A0B0A8A0047A7F3 /* ContactDetailView.swift */,
+				C5C93D522A0B0A9C0047A7F3 /* EditMessageView.swift */,
+				C5C93D542A0B0B090047A7F3 /* BirthdayReminderModel.xcdatamodeld */,
+				C52F0A812A0C8DA900ED189A /* AppDelegate.swift */,
+				C52F0A832A0C8F2500ED189A /* ContactManager.swift */,
 			);
 			path = BirthdayReminder;
 			sourceTree = "<group>";
@@ -263,10 +278,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C52F0A822A0C8DA900ED189A /* AppDelegate.swift in Sources */,
+				C5C93D532A0B0A9C0047A7F3 /* EditMessageView.swift in Sources */,
 				C5C93D2B2A0B0A330047A7F3 /* Persistence.swift in Sources */,
-				C5C93D242A0B0A310047A7F3 /* ContentView.swift in Sources */,
+				C5C93D242A0B0A310047A7F3 /* ContactListView.swift in Sources */,
 				C5C93D2E2A0B0A330047A7F3 /* BirthdayReminder.xcdatamodeld in Sources */,
 				C5C93D222A0B0A310047A7F3 /* BirthdayReminderApp.swift in Sources */,
+				C5C93D512A0B0A8A0047A7F3 /* ContactDetailView.swift in Sources */,
+				C52F0A842A0C8F2500ED189A /* ContactManager.swift in Sources */,
+				C5C93D562A0B0B090047A7F3 /* BirthdayReminderModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +448,7 @@
 				DEVELOPMENT_TEAM = 8Q688K7752;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSContactsUsageDescription = "Contact are needed to give reminders";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -457,6 +478,7 @@
 				DEVELOPMENT_TEAM = 8Q688K7752;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSContactsUsageDescription = "Contact are needed to give reminders";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -600,6 +622,16 @@
 			);
 			currentVersion = C5C93D2D2A0B0A330047A7F3 /* BirthdayReminder.xcdatamodel */;
 			path = BirthdayReminder.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		C5C93D542A0B0B090047A7F3 /* BirthdayReminderModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C5C93D552A0B0B090047A7F3 /* BirthdayReminderModel.xcdatamodel */,
+			);
+			currentVersion = C5C93D552A0B0B090047A7F3 /* BirthdayReminderModel.xcdatamodel */;
+			path = BirthdayReminderModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

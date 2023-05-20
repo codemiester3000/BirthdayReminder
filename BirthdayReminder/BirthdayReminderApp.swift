@@ -1,19 +1,15 @@
-//
-//  BirthdayReminderApp.swift
-//  BirthdayReminder
-//
-//  Created by Owen Khoury on 5/9/23.
-//
+// BirthdayReminderApp.swift
 
 import SwiftUI
 
 @main
 struct BirthdayReminderApp: App {
     let persistenceController = PersistenceController.shared
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContactListView()
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
