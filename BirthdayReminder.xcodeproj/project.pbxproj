@@ -41,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C50BA1602A19675A00353DCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C52F0A812A0C8DA900ED189A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C52F0A832A0C8F2500ED189A /* ContactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactManager.swift; sourceTree = "<group>"; };
 		C5C93D1E2A0B0A310047A7F3 /* BirthdayReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,6 +109,7 @@
 		C5C93D202A0B0A310047A7F3 /* BirthdayReminder */ = {
 			isa = PBXGroup;
 			children = (
+				C50BA1602A19675A00353DCD /* Info.plist */,
 				C5C93D212A0B0A310047A7F3 /* BirthdayReminderApp.swift */,
 				C5C93D232A0B0A310047A7F3 /* ContactListView.swift */,
 				C5C93D252A0B0A330047A7F3 /* Assets.xcassets */,
@@ -448,6 +450,9 @@
 				DEVELOPMENT_TEAM = 8Q688K7752;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BirthdayReminder/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Requesting permission to get birthdays from calendar";
 				INFOPLIST_KEY_NSContactsUsageDescription = "Contact are needed to give reminders";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -478,6 +483,9 @@
 				DEVELOPMENT_TEAM = 8Q688K7752;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BirthdayReminder/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_NSCalendarsUsageDescription = "Requesting permission to get birthdays from calendar";
 				INFOPLIST_KEY_NSContactsUsageDescription = "Contact are needed to give reminders";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
