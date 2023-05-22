@@ -3,11 +3,11 @@ import Contacts
 import CoreData
 import UIKit
 
-extension Color {
-    static let offWhite = Color(red: 225/255, green: 225/255, blue: 235/255)
-    static let robinhoodGreen = Color(red: 0/255, green: 200/255, blue: 5/255)
-    static let customRed = Color(red: 198/255, green: 34/255, blue: 23/255)
-}
+//extension Color {
+//    static let offWhite = Color(red: 225/255, green: 225/255, blue: 235/255)
+//    static let robinhoodGreen = Color(red: 0/255, green: 200/255, blue: 5/255)
+//    static let customRed = Color(red: 202/255, green: 50/255, blue: 32/255)
+//}
 
 struct SearchBar: View {
     @Binding var text: String
@@ -37,7 +37,7 @@ struct SearchBar: View {
                     }
                 )
                 .padding(.horizontal, 24)
-                .padding(.top, 12)
+                .padding(.vertical, 12)
         }
     }
 }
@@ -72,10 +72,8 @@ struct ContactListView: View {
             VStack {
                 SearchBar(text: $searchQuery)
                 
-                Text("We will notify you on each of your contacts' birthdays.")
-                    .font(.footnote)
-                    .padding(.bottom, 5)
-                    .padding(.top, 5)
+                Text("We will notify you on each of your contacts' birthdays")
+                    .font(.system(size: 14, weight: .regular))
                 
                 ScrollView {
                     VStack {
@@ -103,16 +101,16 @@ struct ContactListView: View {
                                     .padding(.bottom, 1)
                                     
                                     HStack {
-                                        Image(systemName: "calendar")
+                                        Image(systemName: "calendar").foregroundColor(contact.birthday != nil ? Color.robinhoodGreen : .customRed)
                                         Text(contact.birthday != nil ? "Birthday: \(dateFormatter.string(from: contact.birthday!))" : "Missing birthday date")
                                             .font(.system(size: 16, weight: .regular)) // Update the font
-                                            .foregroundColor(contact.birthday != nil ? Color.robinhoodGreen : .customRed) // Use Robinhood green color for birthday text
+ 
                                     }
                                     .padding(.bottom, 1)
                                     
                                     HStack {
-                                        Image(systemName: "envelope")
-                                        Text("Message: \(contact.message ?? "")")
+                                        Image(systemName: "bell").foregroundColor(contact.message != nil && contact.message != "" ? Color.robinhoodGreen : .customRed)
+                                        Text(contact.message != nil && contact.message != "" ? "Message: \(contact.message ?? "")" : "Missing birthday message")
                                             .font(.system(size: 16, weight: .regular)) // Update the font
                                     }
                                     .padding(.bottom, 1)
@@ -130,7 +128,7 @@ struct ContactListView: View {
                     }
                 }
                 .padding(.horizontal)
-                .navigationTitle("Contacts")
+                .navigationTitle("Reminders")
                 .onAppear(perform: loadContacts)
             }
         }

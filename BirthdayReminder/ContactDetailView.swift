@@ -1,5 +1,11 @@
 import SwiftUI
 
+extension Color {
+    static let offWhite = Color(red: 225/255, green: 225/255, blue: 235/255)
+    static let robinhoodGreen = Color(red: 0/255, green: 200/255, blue: 5/255)
+    static let customRed = Color(red: 202/255, green: 50/255, blue: 32/255)
+}
+
 struct ContactDetailView: View {
     @ObservedObject var contact: Contact
     @Environment(\.managedObjectContext) private var viewContext
@@ -36,7 +42,7 @@ struct ContactDetailView: View {
                             Image(systemName: "calendar")
                                 .foregroundColor(.gray)
                             Text("Add Birthday")
-                                .foregroundColor(.blue)
+                                .foregroundColor(Color.robinhoodGreen)
                         }
                     }
                     .padding(.vertical)
@@ -64,7 +70,7 @@ struct ContactDetailView: View {
                 .foregroundColor(.white)
                 .padding()
                 .frame(maxWidth: .infinity)
-                .background(Color.blue)
+                .background(Color.robinhoodGreen)
                 .cornerRadius(10)
             }
             .padding(.bottom)
