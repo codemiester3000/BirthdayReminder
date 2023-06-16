@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C52F0A822A0C8DA900ED189A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52F0A812A0C8DA900ED189A /* AppDelegate.swift */; };
 		C52F0A842A0C8F2500ED189A /* ContactManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52F0A832A0C8F2500ED189A /* ContactManager.swift */; };
+		C55C01D22A1AF03900C1A975 /* MessageComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C55C01D12A1AF03900C1A975 /* MessageComposer.swift */; };
 		C5C93D222A0B0A310047A7F3 /* BirthdayReminderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C93D212A0B0A310047A7F3 /* BirthdayReminderApp.swift */; };
 		C5C93D242A0B0A310047A7F3 /* ContactListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5C93D232A0B0A310047A7F3 /* ContactListView.swift */; };
 		C5C93D262A0B0A330047A7F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5C93D252A0B0A330047A7F3 /* Assets.xcassets */; };
@@ -44,6 +45,7 @@
 		C50BA1602A19675A00353DCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C52F0A812A0C8DA900ED189A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C52F0A832A0C8F2500ED189A /* ContactManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactManager.swift; sourceTree = "<group>"; };
+		C55C01D12A1AF03900C1A975 /* MessageComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageComposer.swift; sourceTree = "<group>"; };
 		C5C93D1E2A0B0A310047A7F3 /* BirthdayReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BirthdayReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5C93D212A0B0A310047A7F3 /* BirthdayReminderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirthdayReminderApp.swift; sourceTree = "<group>"; };
 		C5C93D232A0B0A310047A7F3 /* ContactListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListView.swift; sourceTree = "<group>"; };
@@ -115,6 +117,7 @@
 				C5C93D252A0B0A330047A7F3 /* Assets.xcassets */,
 				C5C93D2A2A0B0A330047A7F3 /* Persistence.swift */,
 				C5C93D2C2A0B0A330047A7F3 /* BirthdayReminder.xcdatamodeld */,
+				C55C01D12A1AF03900C1A975 /* MessageComposer.swift */,
 				C5C93D272A0B0A330047A7F3 /* Preview Content */,
 				C5C93D502A0B0A8A0047A7F3 /* ContactDetailView.swift */,
 				C5C93D522A0B0A9C0047A7F3 /* EditMessageView.swift */,
@@ -289,6 +292,7 @@
 				C5C93D512A0B0A8A0047A7F3 /* ContactDetailView.swift in Sources */,
 				C52F0A842A0C8F2500ED189A /* ContactManager.swift in Sources */,
 				C5C93D562A0B0B090047A7F3 /* BirthdayReminderModel.xcdatamodeld in Sources */,
+				C55C01D22A1AF03900C1A975 /* MessageComposer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

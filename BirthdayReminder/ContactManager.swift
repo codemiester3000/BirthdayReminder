@@ -20,10 +20,12 @@ class ContactManager: ObservableObject {
         content.title = "Birthday Reminder"
         content.body = "It's \(contact.name ?? "someone")'s birthday today!"
         content.sound = .default
+        content.userInfo = ["phoneNumber": "7039736936" ?? "", "message": contact.message ?? ""]
         
         // Get the date components for the next birthday at 9:00 AM.
         var dateComponents = Calendar.current.dateComponents([.year, .month, .day], from: birthday)
-        dateComponents.hour = 8
+        dateComponents.hour = 20
+        dateComponents.minute = 51
         
         // Extract day and month from current date and birthday
         let currentDayAndMonth = Calendar.current.dateComponents([.day, .month], from: Date())

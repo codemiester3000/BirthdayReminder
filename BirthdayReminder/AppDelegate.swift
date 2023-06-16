@@ -22,4 +22,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
         completionHandler([.alert, .sound, .badge]) // execute the block with options you prefer
     }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        let userInfo = response.notification.request.content.userInfo
+
+        // Get contact's details from the notification's user info
+        if let phoneNumber = userInfo["phoneNumber"] as? String,
+           let message = userInfo["message"] as? String {
+
+            // Save phone number and message to UserDefaults so the app can access them when it becomes active
+            UserDefaults.standard.set(phoneNumber, forKey: "phoneNumber")
+            UserDefaults.standard.set(message, forKey: "message")
+        }
+
+        completionHandler()
+    }
 }
