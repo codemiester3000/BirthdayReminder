@@ -3,12 +3,6 @@ import Contacts
 import CoreData
 import UIKit
 
-//extension Color {
-//    static let offWhite = Color(red: 225/255, green: 225/255, blue: 235/255)
-//    static let robinhoodGreen = Color(red: 0/255, green: 200/255, blue: 5/255)
-//    static let customRed = Color(red: 202/255, green: 50/255, blue: 32/255)
-//}
-
 struct SearchBar: View {
     @Binding var text: String
     
