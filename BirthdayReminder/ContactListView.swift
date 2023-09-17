@@ -36,6 +36,57 @@ struct SearchBar: View {
     }
 }
 
+struct ContactRow: View {
+    var contact: Contact
+    var dateFormatter: DateFormatter
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) { // Adjust the spacing between elements
+            HStack{
+                Text(contact.name ?? "")
+                    .font(.system(size: 20, weight: .bold))
+                    .foregroundColor(.primary)
+                
+                Spacer()
+                
+                NavigationLink(destination: ContactDetailView(contact: contact)) {
+                    Text("Edit")
+                        .font(.system(size: 14, weight: .regular))
+                        .foregroundColor(.white)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 5)
+                        .background(Color.robinhoodGreen)
+                        .cornerRadius(8)
+                }
+                .padding(.top, 10)
+            }
+            .padding(.bottom, 1)
+            
+            HStack {
+                Image(systemName: "calendar").foregroundColor(contact.birthday != nil ? Color.robinhoodGreen : .customRed)
+                Text(contact.birthday != nil ? "Birthday: \(dateFormatter.string(from: contact.birthday!))" : "Missing birthday date")
+                    .font(.system(size: 16, weight: .regular))
+            }
+            .padding(.bottom, 1)
+            
+            HStack {
+                Image(systemName: "bell").foregroundColor(contact.message != nil && contact.message != "" ? Color.robinhoodGreen : .customRed)
+                Text(contact.message != nil && contact.message != "" ? "Message: \(contact.message ?? "")" : "Missing birthday message")
+                    .font(.system(size: 16, weight: .regular))
+            }
+            .padding(.bottom, 1)
+            
+            Divider().padding(.top, 4)
+        }
+        //.padding()
+        .padding(.horizontal, 5)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(Color.white)
+        .cornerRadius(10)
+    }
+}
+
+
 struct ContactListView: View {
     @Environment(\.managedObjectContext) var viewContext
     @FetchRequest(
@@ -71,54 +122,18 @@ struct ContactListView: View {
                 
                 ScrollView {
                     VStack {
-                        ForEach(contacts.filter({ "\($0.name ?? "")".contains(searchQuery) || searchQuery.isEmpty }), id: \.self) { contact in
+                        ForEach(
+                            contacts.filter({
+                                ($0.name?.isEmpty == false) && ("\($0.name ?? "")".contains(searchQuery) || searchQuery.isEmpty)
+                            }), id: \.self
+                        ) { contact in
                             NavigationLink(destination: ContactDetailView(contact: contact)) {
-                                VStack(alignment: .leading, spacing: 8) { // Adjust the spacing between elements
-                                    HStack{
-                                        Text(contact.name ?? "")
-                                            .font(.system(size: 20, weight: .bold)) // Update the font weight
-                                            .foregroundColor(.primary) // Use the default text color
-                                        
-                                        Spacer()
-                                        
-                                        NavigationLink(destination: ContactDetailView(contact: contact)) {
-                                            Text("Edit")
-                                                .font(.system(size: 14, weight: .regular)) // Update the font
-                                                .foregroundColor(.white)
-                                                .padding(.horizontal, 10)
-                                                .padding(.vertical, 5)
-                                                .background(Color.robinhoodGreen) // Use Robinhood green color
-                                                .cornerRadius(8)
-                                        }
-                                        .padding(.top, 10) // Add padding to push the button down
-                                    }
-                                    .padding(.bottom, 1)
-                                    
-                                    HStack {
-                                        Image(systemName: "calendar").foregroundColor(contact.birthday != nil ? Color.robinhoodGreen : .customRed)
-                                        Text(contact.birthday != nil ? "Birthday: \(dateFormatter.string(from: contact.birthday!))" : "Missing birthday date")
-                                            .font(.system(size: 16, weight: .regular)) // Update the font
- 
-                                    }
-                                    .padding(.bottom, 1)
-                                    
-                                    HStack {
-                                        Image(systemName: "bell").foregroundColor(contact.message != nil && contact.message != "" ? Color.robinhoodGreen : .customRed)
-                                        Text(contact.message != nil && contact.message != "" ? "Message: \(contact.message ?? "")" : "Missing birthday message")
-                                            .font(.system(size: 16, weight: .regular)) // Update the font
-                                    }
-                                    .padding(.bottom, 1)
-                                    
-                                    Divider().padding(.top, 4)
-                                }
-                                .padding()
-                                .frame(maxWidth: .infinity, alignment: .leading)
-                                .background(Color.white) // Use a white background
-                                .cornerRadius(10)
+                                ContactRow(contact: contact, dateFormatter: self.dateFormatter)
                             }
                             .buttonStyle(PlainButtonStyle())
                             .padding(.vertical, 5)
                         }
+
                     }
                 }
                 .padding(.horizontal)
